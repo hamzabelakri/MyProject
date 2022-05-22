@@ -1,0 +1,149 @@
+/*   .item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+.carousel-caption {
+    
+     max-width:50%;
+     left:0 !important;
+     right:0 !important;
+     opacity: 0.9;
+ } */
+
+.section-title-special {
+  background: #28A55F;
+  color: white;
+  padding: 0.5rem 2rem;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+/* .skills-icon{
+	font-size: 3rem;
+	color: var(--mainYellow);
+	background: var(--mainGrey);
+	cursor: default;
+}
+.skills-underline{
+	width: 5rem;
+	height: 0.3rem;
+	background: var(--mainBlue);
+	margin: 1rem auto;
+} */
+
+#section {
+  margin-top: 30px;
+}
+
+.frontPage
+{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+
+}
+
+.blockquote {
+  background-color: lightgreen;
+  border: 3px solid white;
+  border-radius: 6px;
+  box-shadow: 0px 3px 20px #00000019;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+ 
+}
+  .blockquote__content {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0 auto;
+    padding-bottom: 15px;
+
+  }
+  
+  .blockquote__image {
+    width: 120px;
+    margin: 0 auto 5px;
+    margin-top: 10px;
+    border-radius: 50%;
+  }
+
+
+
+
+/* ///////////// */
+
+.container {
+  width: 70%;
+  display: flex;
+  flex-direction: center;
+  flex-wrap: wrap;
+}
+#one {
+  width: 45%;
+  text-align: center;
+  height: 30vh;
+}
+
+/* ///////////// */
+
+#subtitle {
+/*   background: rgba(64, 172, 241, 0.7);
+ */  color: #28A55F;
+  padding: 0.5rem 2rem;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+/* ///////////// */
+
+.question {
+  background: url("https://www.elitium.io/wp-content/uploads/2019/04/pexels-photo-1646341.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.question-grey {
+  background: rgba(79, 109, 122, 0.75);
+}
+
+.question-yellow {
+  background: rgba(227, 181, 5, 0.75);
+}
+
+.question-icon {
+  font-size: 4rem;
+  color: var(--mainBlue);
+  transition: all 0.5s ease-in-out;
+}
+
+.question-icon:hover {
+  color: var(--mainBlue);
+  transform: translateY(-10%);
+}
+
+.question-info {
+  color: var(--mainWhite);
+}
+
+#icon {
+  color: rgba(64, 172, 241, 0.7);
+
+
+}
+
+#reference:hover {
+  text-decoration: underline;
+}
+
+#reference1 {
+  color: black;
+}
+
+#icoon{
+  font-size: 2.5em;
+  color: #28A55F;
+
+  }
