@@ -1,40 +1,28 @@
-import React from "react";
+import React, { useState }from "react";
 import { Button, Form, } from "react-bootstrap";
+import axios from "axios";
+
 
 function ContactUs() {
+  const [contact,setContact]=useState({Name:'',Email:"",message:''});
+  const handleChange=(event)=>{
+     setContact({...contact,[event.target.id]:event.target.value})
+  }
+  
 
-    const onSubmit = (event) => {
+    const onSubmit = async(event) => {
         event.preventDefault();
-        alert ("We'll get back to you within 24-48 hours");
+        try {
+         const res= await axios.post('http://localhost:2000/message',contact)
+          console.log(res)
+        } catch (error) {
+          alert('something wrong')
+        }
+        
       };
 
   return (
-    /* <div>
-      <Form style={{ width: "40%", margin: "auto" }} onSubmit={onSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter your name" />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-  
-        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Label>Enter your message here</Form.Label>
-    <Form.Control as="textarea" rows={2} />
-  </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
-    </div>
-  ); */
+    
 
   <div class="form-wrap" style = {{width: "550px"}}onSubmit={onSubmit}>
   <div class="tabs">
@@ -45,19 +33,19 @@ function ContactUs() {
   <div class="tabs-content">
     <div id="signup-tab-content" class="active">
       <form class="signup-form" action="" method="post">
-        <input
+        <input onChange={handleChange}
           class="input"
-          id="user_name"
+          id="Name"
           autocomplete="off"
           placeholder="Name"
           type="text"
           
           name="username"
         />
-        <input
+        <input onChange={handleChange}
           type="email"
           class="input"
-          id="user_email"
+          id="Email"
           autocomplete="off"
           placeholder="Name@gmail.com"
           name="email"
@@ -66,13 +54,13 @@ function ContactUs() {
         <textarea
           type="textarea"
           class="input"
-          id="user_pass"
+          id="message"
           autocomplete="off"
           placeholder="Enter your message"
           rows="3"
           name="message"
         />
-        <input type="submit" class="button" value="Send" style = {{width: "80%", margin: "auto 50px"}}/>
+        <input onChange={handleChange} type="submit" class="button" value="Send" style = {{width: "80%", margin: "auto 50px"}}/>
       </form>
     </div>
 
