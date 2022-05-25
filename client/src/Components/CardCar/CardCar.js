@@ -1,16 +1,16 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card,  Button} from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { getOneProduct } from "../../Redux/Actions/ProductAction";
 import { useDispatch } from "react-redux";
 import "./CardCar.css"
 
 function Cardcar({ product }) {
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleClick = () => {
-    /* dispatch (getOneProduct(product._id, navigate)) */
-    alert(product._id);
+     dispatch (getOneProduct(product._id, navigate))  
+    
   };
   return (
     <Card class="card"   style={{ width: "18rem" }}>
@@ -26,7 +26,11 @@ function Cardcar({ product }) {
           More Info
         </Button>
       </Card.Body>
-    </Card>
+    </Card> 
+
+
+
+    
   );
 }
 

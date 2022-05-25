@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import "./Profile.css";
 
 function Profile() {
-  const data = useSelector((state) => state.authReducer);
-  console.log(data.user.username);
+  const { user } = useSelector((state) => state.authReducer);
+  
   return (
     <div>
       <div class="profile-wrapper">
@@ -16,9 +16,9 @@ function Profile() {
             class="avatar"
           />
           <div class="profile-info">
-            <h1 class="display-name">{data && data.user.username}</h1>
+            <h1 class="display-name">{user && user.username}</h1>
           </div>
-          <h3>{data && data.user.email}</h3>
+          <h3>{user && user.email}</h3>
 
           <div class="profile-controls">
             <div class="stacked-button">

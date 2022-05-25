@@ -5,3 +5,4 @@ export const LOG_OUT="LOG_OUT"
 export const GET_USER="GET_USER"
 export const GET_ALL_PRODUCTS="GET_ALL_PRODUCTS"
 export const GET_ONE_PRODUCT = "GET_ONE_PRODUCT";
+export const SEARCH_PRODUCT="SEARCH_PRODUCT"

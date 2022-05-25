@@ -90,6 +90,18 @@ const getOneProduct = async(req, res) => {
         res.json({msg:"failed to get product"})
     }
 }
+const findCar=async (req,res)=>{
+    try {
+        
+        const caracter=req.body.caracter
+        const cars=await Product.find();
+        const foundedCar=cars.filter(car=>car.brand.toLowerCase().includes(caracter.toLowerCase()))
+        console.log(foundedCar)
+        res.status(200).json({foundedCar})
+    } catch (error) {
+        res.status(400).json({msg:"no car with this brand exist"})
+    }
+}
 
 
-module.exports={getAllProducts,addProduct, updateProduct, deleteProduct, getOneProduct}
+module.exports={getAllProducts,addProduct, updateProduct, deleteProduct, getOneProduct,findCar}

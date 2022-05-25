@@ -14,6 +14,7 @@ import PrivateRoute from "./Components/PrivateRoute";
 import { useEffect } from "react";
 import { getUser } from "./Redux/Actions/authAction";
 import { useDispatch } from "react-redux";
+import NotFound from "./Components/NotFound";
 
 function App() {
   const token=localStorage.getItem("token")
@@ -32,7 +33,7 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs/>} />
         <Route path="/auth/sign-in" element={<SignIn />} />
         <Route path="/auth/register" element={<Register />} />
-        <Route path="/:id" element={<CarDetail/>}/>
+        <Route path="/product/:id" element={<CarDetail/>}/>
         <Route
           path="/profile"
           element={
@@ -41,6 +42,7 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
        <Footer/>   
       

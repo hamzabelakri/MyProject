@@ -34,11 +34,11 @@ function CustomNavbar() {
             <Link to="/ContactUs" style={{ textDecoration: "none", color: "white"}}>ContactUs</Link>
           </Nav.Link>
           {isAuth ? (
-            <div>
+            <div style={{marginTop:"10px"}}>
               <Button variant="danger" onClick={handleDeconnect}>
                 Logout{" "}
               </Button>
-              <p style={{ color: "white" }}>{user && user.username}</p>
+              {/* <p style={{ color: "white" }}>{user && user.username}</p> */}
             </div>
           ) : (
             <Nav.Link>
