@@ -3,9 +3,16 @@ import { SIGN_IN ,USER_FAIL,LOG_OUT,REGISTER,GET_USER} from "../Types";
 export const login=(useInfo,nav)=>async(dispatch)=>{
     try {
         const response=await axios.post("http://localhost:2000/auth/sign-in",useInfo)
+       
         
         dispatch({type:SIGN_IN,payload:{user:response.data.user,token:response.data.token}})
-        nav('/profile')
+        if(response.data.user.role===1){
+             nav('/adminepage')
+        }
+        else{
+            nav('/profile')
+        }
+        
     } catch (error) {
         dispatch({type:USER_FAIL})
         error.response.data.errors.map((err) => alert(err.msg));

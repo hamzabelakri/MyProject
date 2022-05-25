@@ -5,6 +5,7 @@ import "./Profile.css";
 function Profile() {
   const { user } = useSelector((state) => state.authReducer);
   
+  
   return (
     <div>
       <div class="profile-wrapper">
