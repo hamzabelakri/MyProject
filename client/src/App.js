@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Components/Home/Home.js";
+import Admin from "./Components/Admin/Admin"
 import Footer from "./Components/Footer/Footer"
 import CarDetail from "./Components/CarDetail/CarDetail";
 import FindCar from "./Components/FindCar/FindCar";
@@ -29,6 +30,8 @@ function App() {
       <CustomNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="Admin" element={<Admin />} />
+        <Route path="/ContactUs" element={<ContactUs/>} />
         <Route path="/find-car" element={<FindCar />} />
         <Route path="/ContactUs" element={<ContactUs/>} />
         <Route path="/auth/sign-in" element={<SignIn />} />

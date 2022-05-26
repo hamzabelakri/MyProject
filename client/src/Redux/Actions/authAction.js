@@ -7,7 +7,7 @@ export const login=(useInfo,nav)=>async(dispatch)=>{
         
         dispatch({type:SIGN_IN,payload:{user:response.data.user,token:response.data.token}})
         if(response.data.user.role===1){
-             nav('/adminepage')
+             nav('/Admin')
         }
         else{
             nav('/profile')

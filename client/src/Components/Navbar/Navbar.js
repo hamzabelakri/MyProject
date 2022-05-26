@@ -33,8 +33,12 @@ function CustomNavbar() {
           <Nav.Link>
             <Link to="/ContactUs" style={{ textDecoration: "none", color: "white"}}>ContactUs</Link>
           </Nav.Link>
+
           {isAuth ? (
             <div style={{marginTop:"10px"}}>
+              <Button>
+              <Link to="/profile" style={{ textDecoration: "none", color: "white"}}>My Profile</Link>
+              </Button>
               <Button variant="danger" onClick={handleDeconnect}>
                 Logout{" "}
               </Button>

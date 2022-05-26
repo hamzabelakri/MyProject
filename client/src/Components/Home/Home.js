@@ -39,7 +39,7 @@ function Home() {
           />
 
           <Carousel.Caption>
-            <h3>REPAIR</h3>
+            <h3>REPAIR WORKSHOP</h3>
             <p></p>
           </Carousel.Caption>
         </Carousel.Item>

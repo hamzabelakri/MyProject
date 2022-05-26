@@ -17,7 +17,7 @@ const deleteAllusers = async (req, res) => {
 
 
     } catch (error) {
-        res.status(400).json({msg:"Failed to delete user"})
+        res.status(400).json({msg:"failed to delete user"})
     }
 
   };
